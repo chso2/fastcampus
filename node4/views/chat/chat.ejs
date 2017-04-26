@@ -49,8 +49,23 @@
 
         var socket = io();
 
+        function updateUserList(userList){
+            $('#userList').html("");
+            for(var key in userList){
+                $('#userList').append('<li>' + userList[key] + '</li>');
+            }
+        }
+
+        socket.on('join', function(data){
+            updateUserList(data);
+        });
+
         socket.on('toClient', function(data){
             $('#chatBody').append('<li><strong>'+ data.displayname +'</strong>' + data.message + '</li>');
+        });
+
+        socket.on('leave', function(data){
+            updateUserList(data);
         });
 
         $(document).ready(function() {
