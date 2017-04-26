@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/../fc2-ready-0412-b51231eac42f75bff1e2718d722e865298a3a8e2/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/../fc2-ready-0412-b51231eac42f75bff1e2718d722e865298a3a8e2/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/../fc2-ready-0412-b51231eac42f75bff1e2718d722e865298a3a8e2/tmp" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
