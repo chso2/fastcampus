@@ -9,11 +9,14 @@
 //     });
 // };
 
-
 module.exports = function(io) {
     io.on('connection', function(socket){
+
+        var session = socket.request.session.passport;
+        var user = (typeof session !== 'undefined') ? ( session.user ) : "";
+
         socket.on('chat message', function(data){
-            io.emit('toClient', data.message);
+            io.emit('toClient', { message : data.message , displayname : user.displayname } );
         });
     });
 };
